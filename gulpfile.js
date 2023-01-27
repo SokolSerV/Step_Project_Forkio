@@ -13,6 +13,7 @@ import concat from "gulp-concat";
 import uglify from "gulp-uglify";
 import rename from "gulp-rename";
 import imagemin from "gulp-imagemin";
+import fileInclude from "gulp-file-include";
 
 function cleanDist() {
   return src("./dist/*", { read: false }).pipe(clean());
@@ -24,6 +25,13 @@ function serve() {
       baseDir: "./",
     },
   });
+}
+
+function html() {
+  return src("./src/*.html")
+    .pipe(fileInclude())
+    .pipe(dest("./"))
+    .pipe(bsServer.reload({ stream: true }));
 }
 
 function styles() {
@@ -62,10 +70,10 @@ function images() {
 
 function watcher() {
   watch("./src/scss/**/*.scss", styles);
-  watch("*.html").on("change", bsServer.reload);
+  watch("./src/**/*.html").on("change", html);
   watch("./src/js/*.js", scripts);
   watch("./src/img/**/*.{jpg,jpeg,png,svg,webp,gif}").on("change", images);
 }
 
-export const build = series(cleanDist, parallel(styles, scripts, images));
+export const build = series(cleanDist, parallel(html, styles, scripts, images));
 export const dev = series(build, parallel(serve, watcher));

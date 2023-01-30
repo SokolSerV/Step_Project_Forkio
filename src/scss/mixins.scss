@@ -12,3 +12,10 @@
   color: clr(mainText);
   text-transform: capitalize;
 }
+
+@mixin fz($max-font, $min-font, $max-width, $min-width) {
+  font-size: calc(
+    #{$min-font}px + (#{$max-font} - #{$min-font}) * (100vw - #{$min-width}px) /
+      (#{$max-width} - #{$min-width})
+  );
+}

@@ -10,7 +10,6 @@
     padding-top: 79px;
     padding-bottom: 94px;
   }
-
   @media (max-width: 480px) {
     padding-top: 2px;
     padding-bottom: 12px;
@@ -27,6 +26,9 @@
     font-size: 42px;
     line-height: 44px;
     margin-bottom: 39px;
+  }
+  @media (max-width: 600px) {
+    @include fz(42, 28, 600, 480);
   }
 
   @media (max-width: 480px) {
@@ -58,13 +60,23 @@
     column-gap: 25px;
     row-gap: 30px;
   }
-
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, minmax(auto, 257px));
+  }
   @media (max-width: 480px) {
     grid-template-columns: 257px;
   }
 }
 
 .pricing__item {
+  background-color: rgba(255, 255, 255, 0.11);
+  padding-bottom: 51px;
+
+  &--accent {
+    background-color: rgba(70, 48, 72, 0.84);
+    padding-bottom: 65px;
+  }
+
   @media (max-width: 992px) {
     width: 257px;
     &:nth-child(3) {
@@ -75,6 +87,9 @@
       justify-self: self-end;
     }
   }
+  @media (max-width: 600px) {
+  }
+
   @media (max-width: 480px) {
     &:nth-child(3) {
       justify-self: center;
@@ -100,21 +115,11 @@
   }
 }
 
-.pricing-item__wrap {
-  background-color: rgba(255, 255, 255, 0.11);
-  padding-top: 30px;
-  padding-bottom: 51px;
-
-  &--accent {
-    background-color: rgba(70, 48, 72, 0.84);
-    padding-top: 14px;
-    padding-bottom: 65px;
-  }
-}
-
-.pricing-wrap__price {
+.pricing-item__price {
   margin-top: 0;
   margin-bottom: 20px;
+  padding-top: 30px;
+
   font-weight: 400;
   font-size: 60px;
   line-height: 60px;
@@ -127,10 +132,11 @@
     font-size: 82px;
     line-height: 82px;
     margin-bottom: 16px;
+    padding-top: 14px;
   }
 }
 
-.pricing-wrap__period {
+.pricing-item__period {
   margin-top: 0;
   margin-bottom: 38px;
   font-weight: 400;
@@ -143,7 +149,7 @@
   }
 }
 
-.pricing-wrap__line {
+.pricing-item__line {
   margin-top: 0;
   margin-bottom: 30px;
   border: none;
@@ -156,7 +162,7 @@
   }
 }
 
-.pricing-wrap__profit {
+.pricing-item__profit {
   margin-top: 0;
   margin-bottom: 51px;
   min-height: 44px;
@@ -167,7 +173,7 @@
   }
 }
 
-.pricing-wrap__purchase {
+.pricing-item__purchase {
   padding: 15px 38px;
   font-weight: 400;
   font-size: 15px;

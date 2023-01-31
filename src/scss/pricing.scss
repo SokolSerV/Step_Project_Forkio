@@ -60,7 +60,7 @@
     column-gap: 25px;
     row-gap: 30px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 642px) {
     grid-template-columns: repeat(2, minmax(auto, 257px));
   }
   @media (max-width: 480px) {
@@ -87,7 +87,7 @@
       justify-self: self-end;
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 642px) {
     width: 100%;
     &:nth-child(3) {
       width: 100%;
@@ -96,6 +96,7 @@
 
   @media (max-width: 480px) {
     &:nth-child(3) {
+      width: 299px;
       justify-self: center;
     }
   }

@@ -17,6 +17,7 @@
 }
 
 .pricing__title {
+  @include section-title;
   margin-top: 0;
   margin-bottom: 61px;
 

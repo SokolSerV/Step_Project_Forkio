@@ -4,6 +4,15 @@
   list-style-type: none;
 }
 
+@mixin section-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 50px;
+  text-align: center;
+  color: clr(mainText);
+  text-transform: capitalize;
+}
+
 @mixin fz($max-font, $min-font, $max-width, $min-width) {
   font-size: calc(
     #{$min-font}px + (#{$max-font} - #{$min-font}) * (100vw - #{$min-width}px) /

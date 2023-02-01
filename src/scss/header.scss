@@ -1,0 +1,134 @@
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-width: 320px;
+  width: 100%;
+  height: 103px;
+  background-color: #27262a;
+  display: flex;
+
+  &__logo-img {
+    width: 43px;
+    height: 41px;
+    background-image: url("../img/header/logo-header.svg");
+
+    &:hover {
+      background-image: url("../img/header/logo-header-hover.svg");
+    }
+  }
+
+  &__logo-text {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
+}
+.burgermenu {
+  width: 26px;
+  height: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  &__line {
+    width: 26px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: clr(mainText);
+  }
+  &__line-size {
+    width: 15px;
+  }
+}
+.button {
+  background-color: clr(main);
+  color: clr(mainText);
+  border-radius: 25px;
+  border: 2px clr(main) solid;
+
+  &:hover {
+    background-color: clr(mainText);
+    color: clr(main);
+  }
+
+  &__headerBtn {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  &__headerBtn--size {
+    padding: 9px 23px;
+  }
+
+  &__page-introBtn {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  &__page-intro--size {
+    padding: 11px 27px;
+  }
+}
+
+.page-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/header/background-intro-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 103px 21px 394px 21px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    color: clr(mainText);
+  }
+
+  &__paragraph {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: clr(main);
+  }
+
+  &__version {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #848e97;
+  }
+
+  &__bottom-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -48px;
+  }
+
+  &__text-under-button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #848e97;
+    margin: 12px 0 0 0;
+  }
+}

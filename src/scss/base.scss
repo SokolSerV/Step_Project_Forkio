@@ -1,11 +1,13 @@
 .page__body {
   font-family: "Montserrat", sans-serif;
   // font-family: "Lato", sans-serif;
+  position: relative;
 }
 
 .page__container {
   margin: 0 auto;
   max-width: 1220px;
+  min-width: 320px;
   padding-left: 10px;
   padding-right: 10px;
 }

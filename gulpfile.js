@@ -22,7 +22,7 @@ function cleanDist() {
 function serve() {
   bsServer.init({
     server: {
-      baseDir: "./",
+      baseDir: "./dist/",
     },
   });
 }
@@ -30,7 +30,7 @@ function serve() {
 function html() {
   return src("./src/*.html")
     .pipe(fileInclude())
-    .pipe(dest("./"))
+    .pipe(dest("./dist/"))
     .pipe(bsServer.reload({ stream: true }));
 }
 

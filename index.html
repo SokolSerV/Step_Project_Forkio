@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Step Project - Forkio</title>
-  <link rel="stylesheet" href="./dist/css/style.min.css" />
+  <link rel="stylesheet" href="./css/style.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -22,32 +22,32 @@
   </a>
   <nav class="nav">
     <ul class="nav__list">
-      <li><a href="#" class="nav__link">Overview</a></li>
-      <li><a href="#" class="nav__link">About Fork</a></li>
-      <li><a href="#" class="nav__link">Buying Options</a></li>
-      <li><a href="#" class="nav__link">Support</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Overview</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">About Fork</a></li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Buying Options</a>
+      </li>
+      <li class="nav__item"><a href="#" class="nav__link">Support</a></li>
     </ul>
   </nav>
   <button class="button button__headerBtn button__headerBtn--size">
     Buy Now
   </button>
-  <div class="burgermenu">
-    <div class="burgermenu__line burgermenu__line-size"></div>
-    <div class="burgermenu__line"></div>
-    <div class="burgermenu__line"></div>
-  </div>
+  <button class="header__burgermenu ">
+    <span class="header__burgermenu--hide picture"></span>
+  </button>
 </header>
 <section class="page-intro">
   <div class="page__container">
     <article class="page-intro__text-container">
       <h1 class="page-intro__title">Fork App</h1>
       <p class="page-intro__paragraph">
-        A Real Gamechanger In The World Of Web-Development
+        A real gamechanger in the world of web-development
       </p>
       <p class="page-intro__version">v. 2.8 For Mac and Windows</p>
     </article>
     <article class="page-intro__bottom-block">
-      <button class="button button__page-introBtn button__page-intro--size">
+      <button class="button button__page-introBtn button__page-introBtn--size">
         Download For Free Now
       </button>
       <p class="page-intro__text-under-button">
@@ -58,14 +58,14 @@
 </section>
 
     <main class="page__main">
-      <section class="main__present">
+      <section class="main__present present">
   <div class="page__container">
     <h2 class="present__title">Revolutionary editor</h2>
     <p class="present__sub-title">
       Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet
       vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.
     </p>
-    <ul class="present__btns-wrap">
+    <ul class="present__btns-wrap btns-wrap">
       <li class="btns-wrap__item">
         <a class="btns-wrap__link btn-link" href="#">
           <svg
@@ -123,14 +123,14 @@
     </ul>
   </div>
 </section>
- <section class="main__features">
+ <section class="main__features features">
   <div class="page__container features-container">
     <h3 class="features__title">&ltHere is what you get&gt</h3>
-    <ul class="features__desc-list">
+    <ul class="features__desc-list desc-list">
       <li class="desc-list__item desc-item">
         <img
           class="desc-item__img"
-          src="./dist/img/features_img-1.1.png"
+          src="./img/features_img-1.1.png"
           alt="features_img-1.1.png"
           width="111"
           height="64"
@@ -145,7 +145,7 @@
       <li class="desc-list__item desc-item">
         <img
           class="desc-item__img"
-          src="./dist/img/features_img-1.2.png"
+          src="./img/features_img-1.2.png"
           alt="features_img-1.2.png"
           width="90"
           height="80"
@@ -160,7 +160,7 @@
       <li class="desc-list__item desc-item">
         <img
           class="desc-item__img"
-          src="./dist/img/features_img-1.3.png"
+          src="./img/features_img-1.3.png"
           alt="features_img-1.3.png"
           width="60"
           height="84"
@@ -175,7 +175,7 @@
       <li class="desc-list__item desc-item">
         <img
           class="desc-item__img"
-          src="./dist/img/features_img-1.4.png"
+          src="./img/features_img-1.4.png"
           alt="features_img-1.4.png"
           width="71"
           height="71"
@@ -190,12 +190,12 @@
     </ul>
     <picture class="features__example-img">
       <source
-        srcset="./dist/img/features_img-2-1200-768.png"
+        srcset="./img/features_img-2-1200-768.png"
         media="(min-width: 481px)"
         width="700"
       />
       <img
-        src="./dist/img/features_img-2-320.png"
+        src="./img/features_img-2-320.png"
         alt="features_img-2-320.png"
         width="317"
       />
@@ -204,13 +204,13 @@
 </section>
 
       <section class="testimonials">
-  <div class="page__contailer">
+  <div class="page__container">
     <h3 class="testimonials__title">People Are Talking About Fork</h3>
     <ul class="testimonials__list">
       <li class="testimonials__block testimonials__block-1">
         <img
-          src="dist\img\testimonials-logo\logo1.png"
-          alt=""
+          src="../img/testimonials-logo/logo1.png"
+          alt="logo"
           width="165"
           height="43"
           class="testimonials__img1 testimonials__img--decor"
@@ -222,8 +222,8 @@
       </li>
       <li class="testimonials__block testimonials__block-2">
         <img
-          src="dist\img\testimonials-logo\logo2.png"
-          alt=""
+          src="../img/testimonials-logo/logo2.png"
+          alt="logo"
           width="148"
           height="50"
           class="testimonials__img2 testimonials__img--decor"
@@ -235,8 +235,8 @@
       </li>
       <li class="testimonials__block testimonials__block-3">
         <img
-          src="dist\img\testimonials-logo\logo3.png"
-          alt=""
+          src="../img/testimonials-logo/logo3.png"
+          alt="logo"
           width="64"
           height="64"
           class="testimonials__img3 testimonials__img--decor"
@@ -248,8 +248,8 @@
       </li>
       <li class="testimonials__block testimonials__block-4">
         <img
-          src="dist\img\testimonials-logo\logo4.png"
-          alt=""
+          src="../img/testimonials-logo/logo4.png"
+          alt="logo"
           width="225"
           height="24"
           class="testimonials__img4 testimonials__img--decor"
@@ -261,8 +261,8 @@
       </li>
       <li class="testimonials__block testimonials__block-5">
         <img
-          src="dist\img\testimonials-logo\logo5.png"
-          alt=""
+          src="../img/testimonials-logo/logo5.png"
+          alt="logo"
           width="166"
           height="34"
           class="testimonials__img5 testimonials__img--decor"
@@ -274,8 +274,8 @@
       </li>
       <li class="testimonials__block testimonials__block-6">
         <img
-          src="dist\img\testimonials-logo\logo6.png"
-          alt=""
+          src="../img/testimonials-logo/logo6.png"
+          alt="logo"
           width="108"
           height="34"
           class="testimonials__img6 testimonials__img--decor"
@@ -294,7 +294,7 @@
     </p>
   </div>
 </section>
- <section class="main__pricing">
+ <section class="main__pricing pricing">
   <div class="page__container">
     <h3 class="pricing__title">Fork Subscription Pricing</h3>
     <ul class="pricing__list">
@@ -358,6 +358,6 @@
 </section>
 
     </main>
-    <script src="./dist/js/script.min.js"></script>
+    <script src="./js/script.min.js"></script>
   </body>
 </html>
